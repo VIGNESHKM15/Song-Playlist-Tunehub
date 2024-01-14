@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+iframe {
+		height:100px;
+		width:500px;
+}
+body {
+		display: flex;
+		justify-content: center;
+		align-items: center;  
+		min-height: 100vh;
+		font-family: "poppins";
+		position: relative;
+        background-color: #F3EBF6;
+        font-family: 'Ubuntu', sans-serif;
+        background: url('https://i.ibb.co/K9ND1rv/wallpaperflare-com-wallpaper-5.jpg.jpg') no-repeat center fixed;
+   		background-size: 1550px;
+}
+.displaylists-container {
+		color: #d88321;
+	   	width: auto;
+	   	height: auto;
+	   	background-color: rgba(0,0,0,0.5);
+	   	border: 5px solid #000000;
+	   	padding: 30px;
+	   	text-align: center;
+	   	border-radius: 30px;
+	   	border: 1px solid hsla(0, 0%, 24%, 0.158);
+	   	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+}
+.Playlists {
+		color: #d88321;
+ 		padding-top: 40px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+        font-size: 23px;
+        text-align:center;
+        justify-content: center;
+ }
+a:link {
+    background-color: transparent;
+   	text-decoration: none;
+}
+a:visited {
+    color: #c3b091;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:active {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #E1BEE7;
+    text-decoration: none;
+}
+    
+    @media (max-width: 600px) {
+        .main {
+            border-radius: 0px;
+}
+}
+</style>
+</head>
+<body>
+<div class="displaylists-container">
+<p class="Playlists" align="center">Playlists</p><br>
+	<a href="login" target="_parent">LOGOUT</a>
+	<br><br>
+	<table border>
+		<thead>
+			<tr>
+				<th><h3>Name</h3></th>
+				<th><h3>Songs</h3></th>
+			</tr>
+			</thead>
+			
+			<tbody>
+				<tr th:each="plist:${allPlaylists}">
+					<td th:text="${plist.name}"></td>
+					<td>
+						<ul>
+							<li th:each="song:${plist.songs}">
+							<span th:text="${song.name}"></span>
+							<audio controls>
+									<source th:src="${song.link}" type="audio/mpeg">
+								</audio>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+	</table>
+	</div>
+</body>
+</html>

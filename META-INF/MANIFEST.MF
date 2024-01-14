@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tunehub
+Bundle-SymbolicName: com.tunehub
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Automatic-Module-Name: com.tunehub
+Export-Package: com.example.demo,
+ com.example.demo.controller,
+ com.example.demo.entities,
+ com.example.demo.repositories,
+ com.example.demo.services
