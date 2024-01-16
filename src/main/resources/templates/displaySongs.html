@@ -8,72 +8,131 @@ iframe {
 		height:100px;
 		width:500px;
 }
-body {
-		display: flex;
-		justify-content: center;
-		align-items: center;  
-		min-height: 100vh;
-		font-family: "poppins";
-		position: relative;
-        background-color: #F3EBF6;
-        font-family: 'Ubuntu', sans-serif;
-        background: url('https://i.ibb.co/K9ND1rv/wallpaperflare-com-wallpaper-5.jpg.jpg') no-repeat center fixed;
-   		background-size: 1550px;
-}
-.displaysong-container {
-		color: #d88321;
-	   	width: auto;
-	   	height: auto;
-	   	background-color: rgba(0,0,0,0.5);
-	   	border: 5px solid #000000;
-	   	padding: 30px;
-	   	text-align: center;
-	   	border-radius: 30px;
-	   	border: 1px solid hsla(0, 0%, 24%, 0.158);
-	   	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Josefin Sans", sans-serif;
+    }
 
-}
-.Playlists {
-		color: #d88321;
- 		padding-top: 40px;
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: bold;
-        font-size: 23px;
-        text-align:center;
+    body {
+        display: flex;
         justify-content: center;
- }
-a:link {
-    background-color: transparent;
-   	text-decoration: none;
-}
-a:visited {
-    color: #c3b091;
-    background-color: transparent;
-    text-decoration: none;
-}
-a:active {
-    color: white;
-    background-color: transparent;
-    text-decoration: underline;
-}
-a {
-    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-    color: #E1BEE7;
-    text-decoration: none;
-}
+        align-items: center;
+        min-height: 100vh;
+        background: url('https://i.ibb.co/6sZQThn/spidy.jpg') no-repeat center fixed;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .displaysong-container {
+        width: 730px;
+        height: auto;
+        background: transparent;
+        border: 2px solid maroon;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        color: #ffbb00;
+        border-radius: 18px;
+        padding: 30px 40px;
+        text-shadow: 0 0 3px maroon, 0 0 5px #0000FF;
+    }
+
+    .displaysong-container h1 {
+        font-size: 36px;
+        text-align: center;
+    }
     
-    @media (max-width: 600px) {
-        .main {
-            border-radius: 0px;
-}
-}
+    .login-container .signup {
+        font-size: 19.5px;
+        text-align: center;
+        margin-top: 25px;
+        color: #ffbb00;
+        text-shadow: 0 0 3px maroon, 0 0 5px maroon;
+
+    }
+
+    .signup a {
+        display: flex;
+        justify-content: center;
+        color: #ffbb00;
+        text-decoration: none;
+        font-weight: 600;
+        text-shadow: none;
+    }
+
+    .signup a:hover {
+        text-decoration: underline;
+    }
+
+    @media only screen and (max-width: 1200px) {
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Josefin Sans", sans-serif;
+    }
+    body {
+        background: url('https://i.ibb.co/dPsG1bY/spidy-2.jpg') no-repeat center fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    .displaysong-container {
+        width: 700px;
+        height: auto;
+        background: transparent;
+        border: 2px solid maroon;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        color: #ffbb00;
+        border-radius: 18px;
+        padding: 30px 40px;
+        
+    }
+
+    .displaysong-container h1 {
+        font-size: 56px;
+        text-align: center;
+    }
+
+    .displaysong-container .displaysong {
+    	display: flex;
+        font-size: 19.5px;
+        justify-content:center;
+        text-align: center;
+        margin-top: 25px;
+        color: #ffbb00;
+        text-shadow: 0 0 3px maroon, 0 0 5px maroon;
+
+    }
+
+    .displaysong-container .signup {
+        font-size: 25.5px;
+        text-align: center;
+        margin-top: 10px;
+        color: #ffbb00;
+    }
+
+    .signup a {
+        color: #ffbb00;
+        text-decoration: none;
+        font-weight: 600;
+        text-shadow: 0 0 3px maroon, 0 0 5px #0000FF;
+    }
+
+    .signup a:hover {
+        text-decoration: underline;
+    }
+    }
 </style>
 </head>
 <body>
 <div class="displaysong-container">
-<p class="Playlists" align="center">Playlists</p><br>
+<h1 class="Playlists" align="center">PLAYLISTS</h1><br>
+<div class="signup">
 	<a href="login" target="_parent">LOGOUT</a>
-	<br><br>
+    </div>
+    <div class="displaysong">
 	<table border>
 		<thead>
 			<tr>
@@ -98,5 +157,6 @@ a {
 			</tbody>
 	</table>
 	</div>
+    </div>
 </body>
 </html>

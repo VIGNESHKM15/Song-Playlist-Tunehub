@@ -3,44 +3,141 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 <style type="text/css">
-body {
-		display: flex;
-		justify-content: center;
-        background-color: #F3EBF6;
-        font-family: 'Ubuntu', sans-serif;
-        background: url('https://i.ibb.co/K9ND1rv/wallpaperflare-com-wallpaper-5.jpg.jpg') no-repeat center fixed;
-   		background-size: 1550px;
-   		text-align: center;
-   		position: relative;
-}
-.home-container{
-		color: #d88321;
-		background-color: rgba(0,0,0,0.5);
-        width: auto;
-        height: auto;
-        margin: 250px;
-        padding: 40px;
-    	text-align: center;
-        border-radius: 1.5rem;
-        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-}
- .homepage {
-		color: #d88321;
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: bold;
-        font-size: 23px;
- }   
-@media (max-width: 600px) {
-        .main {
-            border-radius: 0px;
-}
-}
+ * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Josefin Sans", sans-serif;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: url('https://i.ibb.co/6sZQThn/spidy.jpg') no-repeat center fixed;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .home-container {
+        width: 350px;
+        background: transparent;
+        border: 2px solid maroon;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        color: rgb(9, 28, 198);
+        border-radius: 18px;
+        padding: 30px 40px;
+        text-shadow: 0 0 3px rgb(0, 0, 0), 0 0 5px #0000FF;
+    }
+
+    .home-container h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .home-container .home {
+        font-size: 18.5px;
+        text-align: center;
+        color: #ffbb00;
+        margin-top: 50px;
+
+    }
+
+    .home i {
+        position: absolute;
+        right: 150px;
+        top: 50%;
+        transform: translateY(-70%);
+        font-size: 25px;
+        color: #ffbb00;
+        margin-top: 20px;
+    }
+
+    .home p {
+        color: #ffbb00;
+        text-decoration: none;
+        font-weight: 600;
+        justify-content: center;
+    }
+
+    .home p:hover {
+        text-decoration: underline;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Josefin Sans", sans-serif;
+    }
+    body {
+        background: url('https://i.ibb.co/dPsG1bY/spidy-2.jpg') no-repeat center fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    .home-container {
+        width: 550px;
+        height: 260px;
+        background: transparent;
+        border: 2px solid maroon;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        color: rgb(9, 28, 198);
+        border-radius: 18px;
+        padding: 40px 40px;
+
+    }
+
+    .home-container h1 {
+        font-size: 56px;
+        text-align: center;
+    }
+
+    .home-container .home {
+        font-size: 30.5px;
+        text-align: center;
+        color: #ffbb00;
+        margin-top: 80px;
+
+    }
+
+    .home i {
+        position: absolute;
+        right: 250px;
+        top: 50%;
+        transform: translateY(-70%);
+        font-size: 50px;
+        color: #ffbb00;
+        margin-top: 35px;
+    }
+
+    .home p {
+        color: #ffbb00;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: larger;
+        justify-content: center;
+    }
+
+    .home p:hover {
+        text-decoration: underline;
+    }
+    }
 </style>
 </head>
 <body>
 <div class="home-container">
-<p class="homepage">HOME PAGE</p>
+    <h1>HOME PAGE</h1>
+    <div class="home">
+        <i class='bx bxs-registered' ></i>
+    <p>Registered Successfully!</p>
+    </div>
 </div>
 </body>
 </html>

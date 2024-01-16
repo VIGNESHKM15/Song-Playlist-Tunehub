@@ -4,57 +4,114 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
-body {
-		display: flex;
-		justify-content: center;
-        background-color: #F3EBF6;
-        font-family: "Poppins", sans-serif;
-        background: url('https://i.ibb.co/K9ND1rv/wallpaperflare-com-wallpaper-5.jpg.jpg') no-repeat center fixed;
-   		background-size: 1550px;
-   		text-align: center;
-   		position: relative;
-}
-.admin-container{
-		color: #d88321;
-		background-color: rgba(0,0,0,0.5);
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Josefin Sans", sans-serif;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: url('https://i.ibb.co/6sZQThn/spidy.jpg') no-repeat center fixed;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .admin-container {
+        width: 350px;
+        height: 200px;
+        background: transparent;
+        border: 2px solid maroon;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        color: rgb(9, 28, 198);
+        border-radius: 18px;
+        padding: 20px 40px;
+        text-shadow: 0 0 3px rgb(0, 0, 0), 0 0 5px #0000FF;
+    }
+
+    .admin-container h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .admin-container .admin {
+        font-size: 20.5px;
+        text-align: center;
+        color: #ffbb00;
+        margin-top: 20px;
+    }
+
+    .admin a {
+        color: #ffbb00;
+        text-decoration: none;
+        font-weight: 800;
+        font-family: "Playfair Display", serif;
+        text-shadow: none;
+
+    }
+
+    .admin a:hover {
+        text-decoration: underline;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Josefin Sans", sans-serif;
+    }
+    body {
+        background: url('https://i.ibb.co/dPsG1bY/spidy-2.jpg') no-repeat center fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    .admin-container {
         width: auto;
         height: auto;
-        margin: 250px;
-        padding: 40px;
-    	text-align: center;
-        border-radius: 1.5rem;
-        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-}
- .admin {
-		color: #d88321;
-        font-family: "Poppins", sans-serif;
-        font-weight: bold;
-        font-size: 23px;
- }   
-@media (max-width: 600px) {
-        .main {
-            border-radius: 0px;
-}
-}
-a:link {
-    background-color: transparent;
-   	text-decoration: none;
-}
-a:visited {
-    color: #c3b091;
-    background-color: transparent;
-    text-decoration: none;
-}
-a:active {
-    color: white;
-    background-color: transparent;
-    text-decoration: underline;
-}
+        background: transparent;
+        border: 2px solid maroon;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        color: rgb(9, 28, 198);
+        border-radius: 18px;
+        padding: 30px 40px;
+        justify-content: center;
+    }
+
+    .admin-container h1 {
+        font-size: 66px;
+        text-align: center;
+    }
+
+    .admin-container .admin {
+        font-size: 44.5px;
+        text-align: center;
+        color: #ffbb00;
+        margin-top: 40px;
+    }
+
+    .admin a {
+        color: #ffbb00;
+        text-decoration: none;
+        font-weight: 800;
+    }
+
+    .admin a:hover {
+        text-decoration: underline;
+    }
+    }
 </style>
 </head>
 <body>
 	<div class="admin-container">
-		<p class="admin">ADMIN HOME</p><br/>
+		<h1>ADMIN HOME</h1>
+        <div class="admin">
 			<a href = "newSong">Add a new song</a>
 			<br>
 			<a href = "viewSongs">View all songs</a>
@@ -62,6 +119,7 @@ a:active {
 			<a href = "createPlaylist">Create Playlist</a>
 			<br>
 			<a href = "viewPlaylists">View all Playlist</a>
+            </div>
 	</div>
 </body>
 </html>

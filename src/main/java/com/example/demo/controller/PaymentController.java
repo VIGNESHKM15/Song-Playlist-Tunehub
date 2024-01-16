@@ -72,7 +72,7 @@ public class PaymentController {
 	
 	@PostMapping("/verify")
 	@ResponseBody
-	public boolean verifyPayment(@RequestParam String orderId, @RequestParam String paymentId) {
+	public boolean verifyPayment(@RequestParam String orderId, @RequestParam String paymentId, @RequestParam String signatureId) {
 		try {
 			RazorpayClient razorpayClient = new RazorpayClient("rzp_test_2NCuuHRERUBlCO", "v9sSQZnWgaKnEKrrsiVikNuR");
 			
@@ -80,7 +80,7 @@ public class PaymentController {
 			
 			boolean isValidSignature = Utils.verifySignature(verificationData, paymentId, orderId);
 			
-		return false;
+		return isValidSignature;
 	} catch (RazorpayException e) {
 		e.printStackTrace();
 		return false;
