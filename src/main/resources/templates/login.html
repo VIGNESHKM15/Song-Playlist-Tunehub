@@ -2,229 +2,220 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Login Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <style type="text/css">
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Josefin Sans", sans-serif;
-    }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+             }
+            
+            body {
+                font-family: "Josefin Sans", sans-serif;
+                font-size: 14px;
+                margin: 0;
+                color: #999;
+                background: url('https://i.ibb.co/6sZQThn/spidy.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+            
+            input, select, button {
+                font-family: "Josefin Sans", sans-serif; }
+            
+            p, h1, h2, h3, h4, h5, h6, ul {
+                margin: 0; }
+            
+            img {
+                max-width: 100%; }
+            
+            ul {
+                padding-left: 0;
+                margin-bottom: 0; }
+            
+            :focus {
+                outline: none; }
+            
+            .wrapper {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;}
+            .inner {
+                position: relative;
+                width: 435px; }
+                
+            .form {
+                position: relative;
+                max-width: 500px;
+                margin: 50px auto;
+                padding: 30px 20px;
+                border: 2px solid maroon;
+                background: transparent;
+                backdrop-filter: blur(10px);
+                border-radius: 18px;
+            }
+            .form-holder i {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-92%);
+                font-size: 24px;
+                color: maroon;
+            }
+            h3 {
+                text-transform: uppercase;
+                font-size: 30px;
+                font-family: "Josefin Sans", sans-serif;
+                letter-spacing: 3px;
+                font-weight: 900;
+                text-align: center;
+                color: #ffbb00;
+                text-shadow: 0 0 3px maroon, 0 0 5px maroon;
+                margin-bottom: 40px; }
+            
+            .form-holder {
+                position: relative;
+                margin-bottom: 21px;
+             }
+            .form-holder span {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                font-size: 15px;
+                color: #333; }
+            .form-holder span.lnr-lock {
+                left: 2px; 
+            }
+            .form-holder input::placeholder {
+                transform: translatex(0);
+                color: maroon;
+                font-size: 18px;
+                font-family: "Josefin Sans", sans-serif;
+            }
+            .form-control {
+                border: none;
+                border-bottom: 1px solid #e6e6e6;
+                display: block;
+                width: 100%;
+                height: 38px;
+                background: none;
+                padding: 3px 4px 0px;
+                color: #ffbb00;
+                font-weight: 600;
+                font-family: "Josefin Sans", sans-serif;
+                font-size: 18px; }
+            
+            button {
+                border: none;
+                width: 100%;
+                height: 49px;
+                margin-top: 50px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                background: #004cff;
+                color: #fff;
+                text-transform: uppercase;
+                font-family: "Josefin Sans", sans-serif;
+                font-weight: 600;
+                font-size: 15px;
+                letter-spacing: 2px;
+                transition: all 0.5s;
+                position: relative;
+                overflow: hidden; }
+                button span {
+                position: relative;
+                z-index: 2; }
+                button:before, button:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                background-color: rgba(159, 0, 0, 0.637);
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                -o-transition: all 0.3s;
+                transition: all 0.3s;
+                -webkit-transform: translate(-100%, 0);
+                transform: translate(-100%, 0);
+                -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+                transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1); }
+                button:after {
+                -webkit-transition-delay: 0.2s;
+                transition-delay: 0.2s; }
+                button:hover:before, button:hover:after {
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0); }
+            .inner .signup {
+                font-size: 19.5px;
+                text-align: center;
+                margin-top: 25px;
+                color: #ffbb00;
+                text-shadow: 0 0 3px maroon, 0 0 5px maroon;
 
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background: url('https://i.ibb.co/6sZQThn/spidy.jpg') no-repeat center fixed;
-        background-size: cover;
-        background-position: center;
-    }
+            }
+            .signup p a {
+                color: maroon;
+                text-decoration: none;
+                font-weight: 600;
+                text-shadow: none;
+            }
 
-    .login-container {
-        width: 420px;
-        background: transparent;
-        border: 2px solid maroon;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-        color: #ffbb00;
-        border-radius: 18px;
-        padding: 30px 40px;
-
-    }
-
-    .login-container h1 {
-        font-size: 36px;
-        text-align: center;
-    }
-
-    .login-container .us {
-        position: relative;
-        width: 100%;
-        height: 50px;
-        margin: 30px 0;
-    }
-
-    .us input {
-        width: 100%;
-        height: 100%;
-        background: transparent;
-        border: none;
-        outline: none;
-        border: 2px solid maroon;
-        border-radius: 40px;
-        font-size: 16px;
-        color: #ffbb00;
-        padding: 20px 45px 20px 20px;
-    }
-
-    .us input::placeholder {
-        color: #ffbb00;
-        font-weight: 600;
-    }
-
-    .us i {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 20px;
-        color: #ffbb00;
-    }
-
-    .login-container button {
-        width: 100%;
-        height: 50px;
-        background: maroon;
-        border: none;
-        outline: none;
-        border-radius: 40px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-        cursor: pointer;
-        font-size: 20px;
-        color: #ffffff;
-        font-weight: 600;
-    }
-
-    .login-container .signup {
-        font-size: 19.5px;
-        text-align: center;
-        margin-top: 25px;
-        color: #ffbb00;
-        text-shadow: 0 0 3px maroon, 0 0 5px maroon;
-
-    }
-
-    .signup p a {
-        color: maroon;
-        text-decoration: none;
-        font-weight: 600;
-        text-shadow: none;
-    }
-
-    .signup p a:hover {
-        text-decoration: underline;
-    }
-
-    @media only screen and (max-width: 1200px) {
-        * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Josefin Sans", sans-serif;
-    }
-    body {
-        background: url('https://i.ibb.co/dPsG1bY/spidy-2.jpg') no-repeat center fixed;
-        background-size: cover;
-        background-position: center;
-    }
-    .login-container {
-        width: 700px;
-        height: 700px;
-        background: transparent;
-        border: 2px solid maroon;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-        color: #ffbb00;
-        border-radius: 18px;
-        padding: 30px 40px;
-        
-    }
-    .login-container h1 {
-        font-size: 56px;
-        text-align: center;
-    }
-
-    .login-container .us {
-        position: relative;
-        width: 100%;
-        height: 90px;
-        margin: 30px 0;
-    }
-
-    .us input {
-        width: 100%;
-        height: 100%;
-        background: transparent;
-        border: none;
-        outline: none;
-        border: 2px solid maroon;
-        border-radius: 40px;
-        font-size: 36px;
-        color: maroon;
-        padding: 20px 45px 10px 20px;
-        margin-top: 60px;
-    }
-
-    .us input::placeholder {
-        color: maroon;
-        font-size: 34px;
-    }
-
-    .us i {
-        position: absolute;
-        right: 20px;
-        top: 115%;
-        transform: translateY(-50%);
-        font-size: 40px;
-        color: maroon;
-    }
-
-    .login-container button {
-        width: 100%;
-        height: 90px;
-        background: maroon;
-        border: none;
-        outline: none;
-        border-radius: 40px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-        cursor: pointer;
-        font-size: 36px;
-        color: #ffffff;
-        font-weight: 600;
-        margin-top: 90px;
-    }
-
-    .login-container .signup {
-        font-size: 34.5px;
-        text-align: center;
-        margin-top: 60px;
-        color: #ffbb00;
-    }
-
-    .signup p a {
-        color: maroon;
-        text-decoration: none;
-        font-weight: 800;
-    }
-
-    .signup p a:hover {
-        text-decoration: underline;
-    }
-    }
-
-</style>
+            .signup p a:hover {
+                text-decoration: underline;
+            }
+            @media (max-width: 991px) {
+                .inner {
+                width: 400px;
+                left: 4%; } }
+            @media (max-width: 767px) {
+                .inner {
+                width: 100%;
+                left: 0; }
+                body {
+                background: url('https://i.ibb.co/dPsG1bY/spidy-2.jpg');
+                background-size: cover;
+                background-position: center;
+                }
+                form {
+                border: none;
+                padding: 35px;
+                box-shadow: none; }
+                .wrapper {
+                    border: none;
+                }
+             }
+    </style>
 </head>
 <body>
-    <div class="login-container">
-    <h1>LOGIN</h1>
-		<form class="form" id="loginstyle" action="validate" method="post">
-        <div class="us">
-		<input  type = "email" placeholder="Email" name = "email" required/>
-        <i class='bx bxs-user'></i>
-        <br>
-        </div>
-        <div class="us">
-		<input type = "password" placeholder="Password" name = "password" required/>
-        <i class='bx bxs-lock-alt' ></i>
-        <br>
-        </div>
-		<button class="button" type="submit">Login ➜</button>
-        <div class="signup">
-		<p>Don’t have an account?<a href="registration"> Sign Up </a></p>
-        </div>
-	</form>
-	</div>
+    <div class="wrapper">
+        <div class="inner">
+            <form class="form" id="loginstyle" action="validate" method="post">
+                <h3>LOGIN</h3>
+					<div class="form-holder">
+                        <input  type = "text" class="form-control" placeholder="Email" name = "email" required/>
+                        <i class='bx bxs-user'></i>
+                        <br>
+                    </div>
+                    <div class="form-holder">
+                        <input type = "password" class="form-control" placeholder="Password" name = "password" required/>
+                        <i class='bx bxs-lock-alt' ></i>
+                        <br>
+                    </div>
+                    <button class="button" type="submit">Login ➜</button>
+                    <div class="signup">
+                        <p>Don’t have an account?<a href="registration"> Sign Up </a></p>
+                    </div>
+            </form>
+	    </div>
+    </div>
 </body>
 </html>

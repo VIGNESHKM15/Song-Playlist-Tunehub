@@ -3,141 +3,104 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style type="text/css">
- * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Josefin Sans", sans-serif;
-    }
-
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background: url('https://i.ibb.co/6sZQThn/spidy.jpg') no-repeat center fixed;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .home-container {
-        width: 350px;
-        background: transparent;
-        border: 2px solid maroon;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-        color: rgb(9, 28, 198);
-        border-radius: 18px;
-        padding: 30px 40px;
-        text-shadow: 0 0 3px rgb(0, 0, 0), 0 0 5px #0000FF;
-    }
-
-    .home-container h1 {
-        font-size: 36px;
-        text-align: center;
-    }
-
-    .home-container .home {
-        font-size: 18.5px;
-        text-align: center;
-        color: #ffbb00;
-        margin-top: 50px;
-
-    }
-
-    .home i {
-        position: absolute;
-        right: 150px;
-        top: 50%;
-        transform: translateY(-70%);
-        font-size: 25px;
-        color: #ffbb00;
-        margin-top: 20px;
-    }
-
-    .home p {
-        color: #ffbb00;
-        text-decoration: none;
-        font-weight: 600;
-        justify-content: center;
-    }
-
-    .home p:hover {
-        text-decoration: underline;
-    }
-
-    @media only screen and (max-width: 1200px) {
-        * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Josefin Sans", sans-serif;
-    }
-    body {
-        background: url('https://i.ibb.co/dPsG1bY/spidy-2.jpg') no-repeat center fixed;
-        background-size: cover;
-        background-position: center;
-    }
-    .home-container {
-        width: 550px;
-        height: 260px;
-        background: transparent;
-        border: 2px solid maroon;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-        color: rgb(9, 28, 198);
-        border-radius: 18px;
-        padding: 40px 40px;
-
-    }
-
-    .home-container h1 {
-        font-size: 56px;
-        text-align: center;
-    }
-
-    .home-container .home {
-        font-size: 30.5px;
-        text-align: center;
-        color: #ffbb00;
-        margin-top: 80px;
-
-    }
-
-    .home i {
-        position: absolute;
-        right: 250px;
-        top: 50%;
-        transform: translateY(-70%);
-        font-size: 50px;
-        color: #ffbb00;
-        margin-top: 35px;
-    }
-
-    .home p {
-        color: #ffbb00;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: larger;
-        justify-content: center;
-    }
-
-    .home p:hover {
-        text-decoration: underline;
-    }
-    }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+             }
+            
+            body {
+                font-family: "Josefin Sans", sans-serif;
+                font-size: 14px;
+                margin: 0;
+                color: #999;
+                background: url('https://i.ibb.co/6sZQThn/spidy.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+            
+             select {
+                font-family: "Josefin Sans", sans-serif; }
+            
+            p, h1, h2, h3, h4, h5, h6, ul {
+                margin: 0;
+             }
+            img {
+                max-width: 100%; }
+            
+            ul {
+                padding-left: 0;
+                margin-bottom: 0; }
+            
+            a {
+                text-decoration: none; }
+            h2 {
+                color: #ffbb00;
+                text-shadow: 0 0 3px maroon, 0 0 5px maroon;
+                font-weight: 900;
+            }
+            :focus {
+                outline: none; }
+            
+            .wrapper {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;}
+            .inner {
+                position: relative;
+                width: 435px; }
+                
+            form {
+                position: relative;
+                max-width: 500px;
+                margin: 50px auto;
+                padding: 30px 20px;
+                border: 2px solid maroon;
+                background: transparent;
+                backdrop-filter: blur(10px);
+                border-radius: 18px;
+                text-align: center;
+            }
+            .form-holder {
+                position: relative;
+                margin-bottom: 21px;
+             }
+            
+            @media (max-width: 991px) {
+                .inner {
+                width: 400px;
+                left: 4%; } }
+            @media (max-width: 767px) {
+                .inner {
+                width: 100%;
+                left: 0; }
+                body {
+                background: url('https://i.ibb.co/dPsG1bY/spidy-2.jpg');
+                background-size: cover;
+                background-position: center;
+                }
+                form {
+                padding: 35px;
+                box-shadow: none; }
+                .wrapper {
+                    border: none;
+                }
+             }
 </style>
 </head>
 <body>
-<div class="home-container">
-    <h1>HOME PAGE</h1>
-    <div class="home">
-        <i class='bx bxs-registered' ></i>
-    <p>Registered Successfully!</p>
+    <div class="wrapper">
+        <div class="inner">
+            <form>
+                <div class="form-holder">
+                    <i class='bx bxs-registered' ></i>
+                    <h2>Registered Successfully!</h2>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 </body>
 </html>

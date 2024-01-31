@@ -2,161 +2,174 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Display Songs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style type="text/css">
 iframe {
 		height:100px;
 		width:500px;
 }
 * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Josefin Sans", sans-serif;
-    }
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+             }
+            
+            body {
+                font-family: "Josefin Sans", sans-serif;
+                font-size: 14px;
+                margin: 0;
+                color: #999;
+                background: url('https://i.ibb.co/6sZQThn/spidy.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+            
+            select {
+                font-family: "Josefin Sans", sans-serif; }
+            
+            p, h1, h2, h3, h4, h5, h6, ul {
+                margin: 0;
+             }
+            h2 {
+                color: blue;
+                text-decoration: underline;
+            }
+            img {
+                max-width: 100%; }
+            
+            ul {
+                padding-left: 0;
+                margin-bottom: 0; }
+            
+            a {
+                text-decoration: none; }
+            
+            :focus {
+                outline: none; }
+            
+            .wrapper {
+                width: auto;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;}
+            .inner {
+                position: relative;
+                width: auto; }
+                
+            form {
+                width: 800px;
+                position: relative;
+                margin: 50px auto;
+                padding: 30px 20px;
+                border: 2px solid maroon;
+                background: transparent;
+                backdrop-filter: blur(10px);
+                border-radius: 18px;
+                text-align: center;
+            }
+            h3 {
+                text-transform: uppercase;
+                font-size: 30px;
+                font-family: "Josefin Sans", sans-serif;
+                letter-spacing: 3px;
+                text-align: center;
+                color: #ffbb00;
+                font-weight: 700;
+                text-shadow: 0 0 3px maroon, 0 0 5px maroon;
+                margin-bottom: 40px; }
+            
+            .form-holder {
+                position: relative;
+                margin-bottom: 21px;
+             }
+            .form-control {
+                border: none;
+                border-bottom: 1px solid #e6e6e6;
+                display: block;
+                width: 100%;
+                height: 38px;
+                background: none;
+                padding: 3px 4px 0px;
+                color: #ffbb00;
+                font-weight: 600;
+                font-family: "Josefin Sans", sans-serif;
+                font-size: 18px; }
 
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background: url('https://i.ibb.co/6sZQThn/spidy.jpg') no-repeat center fixed;
-        background-size: cover;
-        background-position: center;
-    }
+            .wrapper .songs {
+                display: flex;
+                font-size: 19.5px;
+                justify-content:center;
+                text-align: center;
+                margin-top: 25px;
+                color: #ffbb00;
+                text-shadow: 0 0 3px maroon, 0 0 5px maroon;
 
-    .displaysong-container {
-        width: 730px;
-        height: auto;
-        background: transparent;
-        border: 2px solid maroon;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-        color: #ffbb00;
-        border-radius: 18px;
-        padding: 30px 40px;
-        text-shadow: 0 0 3px maroon, 0 0 5px #0000FF;
-    }
-
-    .displaysong-container h1 {
-        font-size: 36px;
-        text-align: center;
-    }
-    
-    .login-container .signup {
-        font-size: 19.5px;
-        text-align: center;
-        margin-top: 25px;
-        color: #ffbb00;
-        text-shadow: 0 0 3px maroon, 0 0 5px maroon;
-
-    }
-
-    .signup a {
-        display: flex;
-        justify-content: center;
-        color: #ffbb00;
-        text-decoration: none;
-        font-weight: 600;
-        text-shadow: none;
-    }
-
-    .signup a:hover {
-        text-decoration: underline;
-    }
-
-    @media only screen and (max-width: 1200px) {
-     * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Josefin Sans", sans-serif;
-    }
-    body {
-        background: url('https://i.ibb.co/dPsG1bY/spidy-2.jpg') no-repeat center fixed;
-        background-size: cover;
-        background-position: center;
-    }
-    .displaysong-container {
-        width: 700px;
-        height: auto;
-        background: transparent;
-        border: 2px solid maroon;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-        color: #ffbb00;
-        border-radius: 18px;
-        padding: 30px 40px;
-        
-    }
-
-    .displaysong-container h1 {
-        font-size: 56px;
-        text-align: center;
-    }
-
-    .displaysong-container .displaysong {
-    	display: flex;
-        font-size: 19.5px;
-        justify-content:center;
-        text-align: center;
-        margin-top: 25px;
-        color: #ffbb00;
-        text-shadow: 0 0 3px maroon, 0 0 5px maroon;
-
-    }
-
-    .displaysong-container .signup {
-        font-size: 25.5px;
-        text-align: center;
-        margin-top: 10px;
-        color: #ffbb00;
-    }
-
-    .signup a {
-        color: #ffbb00;
-        text-decoration: none;
-        font-weight: 600;
-        text-shadow: 0 0 3px maroon, 0 0 5px #0000FF;
-    }
-
-    .signup a:hover {
-        text-decoration: underline;
-    }
-    }
+            }
+            
+            @media (max-width: 991px) {
+                .inner {
+                width: 400px;
+                left: 4%; } }
+            @media (max-width: 767px) {
+                .inner {
+                width: 100%;
+                left: 0; }
+                body {
+                background: url('https://i.ibb.co/dPsG1bY/spidy-2.jpg');
+                background-size: fixed;
+                background-position: center;
+                
+                }
+                form {
+                width:auto;
+                padding: 35px;
+                box-shadow: none; }
+                .wrapper {
+                    border: none;
+                }
+                .wrapper .songs {
+                font-size: 10px;
+                }
+             }
 </style>
 </head>
 <body>
-<div class="displaysong-container">
-<h1 class="Playlists" align="center">PLAYLISTS</h1><br>
-<div class="signup">
-	<a href="login" target="_parent">LOGOUT</a>
-    </div>
-    <div class="displaysong">
-	<table border>
-		<thead>
-			<tr>
-				<th>Name</th>
-				<th>Artist</th>
-				<th>Genre</th>
-				<th>Play</th>
-			</tr>
-			</thead>
-			
-			<tbody>
-				<tr th:each="song:${songs}">
-					<td th:text="${song.name}"></td>
-					<td th:text="${song.artist}"></td>
-					<td th:text="${song.genre}"></td>
-					<td>
-						<audio controls>
-							<source th:src="${song.link}" type="audio/mpeg">
-						</audio>
-					</td>
-				</tr>
-			</tbody>
-	</table>
-	</div>
+    <div class="wrapper">
+        <div class="inner">
+            <form>
+                <h3>PLAYLISTS</h3>
+                <div class="form-holder">
+                    <a href="login" target="_parent"><h2>LOGOUT</h2></a>
+                    </div>
+                    <div class="songs">
+                    <table border>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Artist</th>
+                                <th>Genre</th>
+                                <th>Play</th>
+                            </tr>
+                            </thead>
+                            
+                            <tbody>
+                                <tr th:each="song:${songs}">
+                                    <td th:text="${song.name}"></td>
+                                    <td th:text="${song.artist}"></td>
+                                    <td th:text="${song.genre}"></td>
+                                    <td>
+                                        <audio controls style="width: 230px;height: 45px;" preload="none">
+                                            <source th:src="${song.link}" type="audio/mpeg">
+                                        </audio>
+                                    </td>
+                                </tr>
+                            </tbody>
+                    </table>
+	            </div>
+            </form>
+        </div>
     </div>
 </body>
 </html>

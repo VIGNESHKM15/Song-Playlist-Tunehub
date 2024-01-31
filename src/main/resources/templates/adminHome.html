@@ -2,124 +2,144 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>ADMIN HOME</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style type="text/css">
-* {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Josefin Sans", sans-serif;
-    }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+             }
+            
+            body {
+                font-family: "Josefin Sans", sans-serif;
+                font-size: 14px;
+                margin: 0;
+                color: #999;
+                background: url('https://i.ibb.co/6sZQThn/spidy.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+            
+             select {
+                font-family: "Josefin Sans", sans-serif; }
+            
+            p, h1, h2, h3, h4, h5, h6, ul {
+                margin: 0;
+             }
+            h2 {
+            color: blue;
+                text-decoration: underline;
+            }
+            img {
+                max-width: 100%; }
+            
+            ul {
+                padding-left: 0;
+                margin-bottom: 0; }
+            
+            a {
+                text-decoration: none; }
+            
+            :focus {
+                outline: none; }
+            
+            .wrapper {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;}
+            .inner {
+                position: relative;
+                width: 435px; }
+                
+            form {
+                position: relative;
+                max-width: 500px;
+                margin: 50px auto;
+                padding: 30px 20px;
+                border: 2px solid maroon;
+                background: transparent;
+                backdrop-filter: blur(10px);
+                border-radius: 18px;
+                text-align: center;
+            }
 
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background: url('https://i.ibb.co/6sZQThn/spidy.jpg') no-repeat center fixed;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .admin-container {
-        width: 350px;
-        height: 200px;
-        background: transparent;
-        border: 2px solid maroon;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-        color: rgb(9, 28, 198);
-        border-radius: 18px;
-        padding: 20px 40px;
-        text-shadow: 0 0 3px rgb(0, 0, 0), 0 0 5px #0000FF;
-    }
-
-    .admin-container h1 {
-        font-size: 36px;
-        text-align: center;
-    }
-
-    .admin-container .admin {
-        font-size: 20.5px;
-        text-align: center;
-        color: #ffbb00;
-        margin-top: 20px;
-    }
-
-    .admin a {
-        color: #ffbb00;
-        text-decoration: none;
-        font-weight: 800;
-        font-family: "Playfair Display", serif;
-        text-shadow: none;
-
-    }
-
-    .admin a:hover {
-        text-decoration: underline;
-    }
-
-    @media only screen and (max-width: 1200px) {
-        * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Josefin Sans", sans-serif;
-    }
-    body {
-        background: url('https://i.ibb.co/dPsG1bY/spidy-2.jpg') no-repeat center fixed;
-        background-size: cover;
-        background-position: center;
-    }
-    .admin-container {
-        width: auto;
-        height: auto;
-        background: transparent;
-        border: 2px solid maroon;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-        color: rgb(9, 28, 198);
-        border-radius: 18px;
-        padding: 30px 40px;
-        justify-content: center;
-    }
-
-    .admin-container h1 {
-        font-size: 66px;
-        text-align: center;
-    }
-
-    .admin-container .admin {
-        font-size: 44.5px;
-        text-align: center;
-        color: #ffbb00;
-        margin-top: 40px;
-    }
-
-    .admin a {
-        color: #ffbb00;
-        text-decoration: none;
-        font-weight: 800;
-    }
-
-    .admin a:hover {
-        text-decoration: underline;
-    }
-    }
+            .form-holder i {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 24px;
+                color: maroon;
+            }
+            h3 {
+                text-transform: uppercase;
+                font-size: 30px;
+                font-family: "Josefin Sans", sans-serif;
+                letter-spacing: 3px;
+                text-align: center;
+                color: #ffbb00;
+                font-weight: 700;
+                text-shadow: 0 0 3px maroon, 0 0 5px maroon;
+                margin-bottom: 40px; }
+            
+            .form-holder {
+                position: relative;
+                margin-bottom: 21px;
+             }
+            .form-control {
+                border: none;
+                border-bottom: 1px solid #e6e6e6;
+                display: block;
+                width: 100%;
+                height: 38px;
+                background: none;
+                padding: 3px 4px 0px;
+                color: #ffbb00;
+                font-weight: 600;
+                font-family: "Josefin Sans", sans-serif;
+                font-size: 18px; }
+            
+            @media (max-width: 991px) {
+                .inner {
+                width: 400px;
+                left: 4%; } }
+            @media (max-width: 767px) {
+                .inner {
+                width: 100%;
+                left: 0; }
+                body {
+                background: url('https://i.ibb.co/dPsG1bY/spidy-2.jpg');
+                background-size: cover;
+                background-position: center;
+                
+                }
+                form {
+                padding: 35px;
+                box-shadow: none; }
+                .wrapper {
+                    border: none;
+                }
+             }
 </style>
 </head>
 <body>
-	<div class="admin-container">
-		<h1>ADMIN HOME</h1>
-        <div class="admin">
-			<a href = "newSong">Add a new song</a>
+    <div class="wrapper">
+        <div class="inner">
+            <form>
+            <h3>ADMIN HOME</h3>
+            <div class="form-holder">
+			<a href = "newSong"><h2>Add a new song</h2></a>
 			<br>
-			<a href = "viewSongs">View all songs</a>
+			<a href = "viewSongs"><h2>View all songs</h2></a>
 			<br>
-			<a href = "createPlaylist">Create Playlist</a>
+			<a href = "createPlaylist"><h2>Create Playlist</h2></a>
 			<br>
-			<a href = "viewPlaylists">View all Playlist</a>
+			<a href = "viewPlaylists"><h2>View all Playlist</h2></a>
             </div>
+            </form>
+        </div>
 	</div>
 </body>
 </html>
